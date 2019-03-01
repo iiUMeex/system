@@ -5,7 +5,6 @@ const moment = require("moment");
 const ownerid = ('295216776428388362','508254642447056906')
 const package = ('package.json');
 const { User, MessageMentions } = require('discord.js') // Disocrd Package Classes
-const Canvas = require('canvas-prebuilt'); // Canvas Package for photo stuffs
 const Jimp = require('jimp'); // Jimp Package to get User's Avatar
 const SQLite = require('sqlite'); // SQLite Package to read & write to sql files and databases
 const path = require('path'); // Path Package to get paths easily
