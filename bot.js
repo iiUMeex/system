@@ -1929,7 +1929,6 @@ mentionned.send(`:credit_card: | Transfer Receipt \`\`\`\`You have received ${ar
 
 const config = require(path.join(__dirname, 'config.json')); // Bot Config
 const {
-  prefix,
   ids
 } = config;
 // Clients:
@@ -2149,7 +2148,7 @@ Client.on('message', async msg => { // When Bot is recived message
 
     }
 
-  } else if(cmd == 'تحويل') {
+  } else if(cmd == 'credits') {
 
     let men = msg.mentions.users.first();
 
