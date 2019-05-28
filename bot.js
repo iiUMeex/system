@@ -102,7 +102,7 @@ message.react("❌")
 
  client.on('message', message => {
               if (!message.channel.guild) return;
-      if(message.content =='*count')
+      if(message.content =='.count')
       var IzRo = new Discord.RichEmbed()
       .setThumbnail(message.author.avatarURL)
       .setFooter(message.author.username, message.author.avatarURL)
@@ -113,7 +113,7 @@ message.react("❌")
     });
 
 client.on('message', message => {
-    if (message.content === "*rooms") {
+    if (message.content === ".rooms") {
         if (message.author.bot) return
                       if (!message.guild) return;
 
@@ -244,7 +244,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-   if (message.content.startsWith("*id")) {
+   if (message.content.startsWith(".id")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
 
                var mentionned = message.mentions.users.first();
@@ -1058,29 +1058,6 @@ setInterval(function(){})
         
             
     }
-});
-
-client.on('guildCreate', guild => {
-         const embed = new Discord.RichEmbed()
-     .setColor("RED")
-     .setTitle('Click Here To Add Bot .!')
-     .setURL('https://discordapp.com/oauth2/authorize?client_id=539560833097793584&permissions=8&scope=bot')
-  .setDescription(`**
-  New Server Add DarkBot
-اسم السيرفر: ${guild.name}
-صاحب السيرفر: ${guild.owner}**`);
-client.channels.get("543530103527964674").sendEmbed(embed)
-});
-client.on('guildDelete', guild => {
-         const embed = new Discord.RichEmbed()
-     .setColor("GOLD")
-     .setTitle('Click Here To Add Bot .!')
-     .setURL('https://discordapp.com/oauth2/authorize?client_id=539560833097793584&permissions=8&scope=bot')
-  .setDescription(`**
-  Server Kicked DarkBot :cry:
-اسم السيرفر: ${guild.name}
-صاحب السيرفر: ${guild.owner}**`);
-client.channels.get("543530103527964674").sendEmbed(embed)
 });
 
 client.on('messageDelete', message => {
