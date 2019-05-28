@@ -435,20 +435,11 @@ client.on('message', message => {
 
 client.on('guildMemberAdd', member => {
   
-  const channel = member.guild.channels.find(ch => ch.name === 'army');
+  const channel = member.guild.channels.find(ch => ch.name === 'chat');
  
   if (!channel) return;
 
-  channel.send(`**Welcome To** __**The Army**__ :two_hearts: :coffee:, ${member}`);
-});
-
-client.on('guildMemberAdd', member => {
-  
-  const channel = member.guild.channels.find(ch => ch.name === 'welcome');
- 
-  if (!channel) return;
-
-  channel.send(` **Welcome To Server **:two_hearts: :coffee:, ${member}`);
+  channel.send(`**Welcome To** __**Mafia Community**__ :two_hearts: :coffee:, ${member}`);
 });
 
 client.on('message', message => {
@@ -1756,7 +1747,7 @@ client.on('guildMemberAdd', member => {
     const ei = invites[member.guild.id];
     const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
-    const xkiller = member.guild.channels.find("name", "welcome");
+    const xkiller = member.guild.channels.find("name", "chat");
      xkiller.send(`<@${member.user.id}> تمت الدعوه من <@${inviter.id}>`);
   });
 });
